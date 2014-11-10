@@ -1,0 +1,133 @@
+
+
+/* First body row cells & input on table without columns header */
+table.dynaimic-table.wh tbody tr:nth-child(1), table.dynaimic-table.wh tbody tr:nth-child(1) input {
+	font-weight: 800;
+}
+
+
+/* Disabled Buttons */
+table.dynaimic-table tbody td.remove {
+	background: #F9F9F9;
+	width: 16px !important;
+	vertical-align: middle;
+	border-right: 0 none;
+	position: relative;
+}
+/* Disabled Buttons */
+table.dynaimic-table tbody td.order {
+	width: 16px !important;
+	text-align: center !important;
+	vertical-align: middle;
+	color: #AAA;
+	text-shadow: #FFF 0 1px 0;
+	cursor: move;
+	border-right-color: #E1E1E1;
+	background: #F4F4F4;
+}
+
+
+
+/*add/remove buttons*/
+
+/* Disabled Buttons */
+table.dynaimic-table thead th .addcol.icon-button  {
+	position: relative;
+	z-index: 1000;
+	float: right;
+	margin-right: -18px;
+}
+/* Disabled Buttons */
+table.dynaimic-table thead th .delcol.icon-button  {
+	float: right;
+	margin-right: 5px;
+}
+
+/* Disabled Buttons */
+table.dynaimic-table tbody td .addrow.icon-button  {
+	margin-top: -23px;
+}
+
+
+.addcol.icon-button, .delcol.icon-button,.addrow.icon-button, .delrow.icon-button {
+background: url(../img/sprite.png) -16px -116px no-repeat #FFF;
+display: block;
+height: 18px;
+width: 18px;
+border-radius: 9px;
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none;
+text-indent: -9999px;
+}
+
+table.dynaimic-table  > tbody > tr > td.remove > a.addrow.icon-button,
+table.dynaimic-table  > tbody > tr > td.remove > a.delrow.icon-button {
+	position: absolute;
+
+	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+
+	visibility: hidden;
+	opacity: 0;
+}
+
+table.dynaimic-table  > thead > tr > th > a.addcol.icon-button,
+table.dynaimic-table  > thead > tr > th > a.delcol.icon-button{
+
+	-webkit-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-moz-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	-o-transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+	transition: opacity 0.25s 0s ease-in-out, visibility 0s linear 0.25s;
+
+	visibility: hidden;
+	opacity: 0;
+}
+table.dynaimic-table  > tbody > tr > td.remove > a.addrow.icon-button {
+	bottom: -10px;
+	z-index: 1000;
+}
+
+table.dynaimic-table  > tbody > tr > td.remove > a.delrow.icon-button {
+	position: relative;
+}
+table.dynaimic-table  > thead > tr > th:hover > a.addcol.icon-button,
+table.dynaimic-table  > thead > tr > th:hover > a.delcol.icon-button,
+table.dynaimic-table > tbody > tr:hover > td.remove > a.addrow.icon-button,
+table.dynaimic-table > tbody > tr:hover > td.remove > a.delrow.icon-button {
+
+	-webkit-transition-delay:0s;
+	-moz-transition-delay:0s;
+	-o-transition-delay:0s;
+	transition-delay:0s;
+
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Disabled Buttons */
+table.dynaimic-table > thead > tr > th > a.delcol.icon-button.disabled,
+table.dynaimic-table > tbody > tr:hover > td.remove > a.delrow.icon-button.disabled {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.delrow.icon-button, .delcol.icon-button {
+background-position: -66px -116px;
+}
+.addcol.icon-button:hover,
+.addrow.icon-button:hover {
+background-position: -16px -166px;
+}
+.delcol.icon-button:hover,
+.delrow.icon-button:hover {
+background-position: -66px -166px;
+}
+
+
+
+
