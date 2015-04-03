@@ -337,7 +337,7 @@ class acf_field_table_field extends acf_field {
 			      $html .= '<td>'.implode('</td><td>', $row).'</td>';
 			   $html .=  '</tr>';
 			 endforeach;
-			  $html .= '<tbody>';
+			  $html .= '</tbody>';
 			$html .= '</table>';
 
 		// return

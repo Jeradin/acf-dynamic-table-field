@@ -117,6 +117,12 @@ class acf_field_dynamic_table_field extends acf_field {
 
 	function render_field( $field ) {
 
+		$maxrows = null;
+
+		$disablesort = null;
+
+		$defaultheaders = null;
+
 
 		// vars
 		$o = array( 'id', 'name' );
@@ -296,7 +302,7 @@ class acf_field_dynamic_table_field extends acf_field {
 			      $html .= '<td>'.implode('</td><td>', $row).'</td>';
 			   $html .=  '</tr>';
 			 endforeach;
-			  $html .= '<tbody>';
+			  $html .= '</tbody>';
 			$html .= '</table>';
 
 		// return

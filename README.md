@@ -57,5 +57,8 @@ activated. This is not a standalone plugin for WordPress, it only adds additiona
 
 
 ## Changelog ##
+### 1.0.1
+* fixed an unclosed tbody
+
 ### 1.0
 * Initial Release

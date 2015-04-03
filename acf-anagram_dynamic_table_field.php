@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Dynamic Table Field
 Plugin URI: http://anagr.am
 Description: Dynamic Table field for Advanced Custom Fields
-Version: 1.0.0
+Version: 1.0.1
 Author: Geet Jacobs
 Author URI: http://anagr.am
 License: GPLv2 or later
