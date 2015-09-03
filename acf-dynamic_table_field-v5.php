@@ -39,7 +39,7 @@ class acf_field_dynamic_table_field extends acf_field {
 		$this->settings = array(
 			'path' => plugin_dir_path( __FILE__ ),
 			'dir' => plugin_dir_url( __FILE__ ),
-			'version' => '1.0.0'
+			'version' => '1.0.4'
 		);
 
 		// do not delete!
@@ -276,11 +276,12 @@ class acf_field_dynamic_table_field extends acf_field {
 	function format_value( $value, $post_id, $field ) {
 
 		// bail early if no value or not for template
-		if( empty($value) || !is_string($value) ) {
+		if( $value=='[[""]]' || !is_string($value) ) {
 
-			return $value;
+			return '';
 
 		}
+
 
 		$tabledata =  json_decode($value);
 
@@ -296,15 +297,15 @@ class acf_field_dynamic_table_field extends acf_field {
 			      $html .= '<th>'.implode('</th><th>', $theheaders ).'</th>';
 			    $html .= '</tr>';
 			  $html .= '</thead>';
-			 $html .=  '<tbody>';
+			 $html .=  '<tbody class="list">';
 			 foreach ($tabledata as $row): array_map('htmlentities', $row);
 			    $html .= '<tr>';
-			      $html .= '<td>'.implode('</td><td>', $row).'</td>';
+			    $html .= implode('', array_map(function ($v, $k)  use ($theheaders) { return '<td data-title="'.$theheaders[$k].'"  class="'.$theheaders[$k].'">'. $v.'</td>'; }, $row, array_keys($row)));
+			     // $html .= '<td  data-title="'.$theheaders[$key].'">'.implode('</td><td>', $row).'</td>';
 			   $html .=  '</tr>';
 			 endforeach;
 			  $html .= '</tbody>';
 			$html .= '</table>';
-
 		// return
 		return $html;
 

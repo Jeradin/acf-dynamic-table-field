@@ -4,6 +4,18 @@
 table.dynaimic-table.wh tbody tr:nth-child(1), table.dynaimic-table.wh tbody tr:nth-child(1) input {
 	font-weight: 800;
 }
+table.dynaimic-table.acf-table{
+	table-layout: fixed;
+}
+
+table.dynaimic-table.acf-table tr td:first-child,
+table.dynaimic-table.acf-table tr td:last-child,
+table.dynaimic-table.acf-table tr th:first-child,
+table.dynaimic-table.acf-table tr th:last-child  {
+    width:16px;
+}
+
+
 
 
 /* Disabled Buttons */
