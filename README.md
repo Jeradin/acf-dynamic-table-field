@@ -7,9 +7,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+**WARNING: Upgrading from ACF4 to ACF5 can corrupt data in the table output.**
 
 == Description ==
 Adds a Dynamic Table Field to Advanced Custom Fields.
+
 
 This is an add-on for the [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/)
 WordPress plugin and will not provide any functionality to WordPress unless Advanced Custom Fields is installed
